@@ -10,37 +10,37 @@ export default function Home() {
     {
       title: "Massagem Relaxante",
       description: "Para alívio do estresse e melhora do sono",
-      icon: "🧘",
+      color: "bg-blue-50",
       benefits: ["Reduz tensão", "Melhora sono", "Relaxamento profundo"]
     },
     {
       title: "Massagem Terapêutica",
       description: "Foco em dores crônicas e tensão muscular",
-      icon: "💪",
+      color: "bg-green-50",
       benefits: ["Alívio de dores", "Recuperação muscular", "Mobilidade"]
     },
     {
       title: "Massagem Facial",
       description: "Revitalização e drenagem",
-      icon: "✨",
+      color: "bg-purple-50",
       benefits: ["Pele revitalizada", "Drenagem linfática", "Rejuvenescimento"]
     },
     {
       title: "Reflexologia",
       description: "Massagem nos pés para alívio de fadiga",
-      icon: "🦶",
+      color: "bg-orange-50",
       benefits: ["Alívio de fadiga", "Equilíbrio energético", "Relaxamento"]
     },
     {
       title: "Liberação Miofascial",
       description: "Restauração da mobilidade e flexibilidade",
-      icon: "🔄",
+      color: "bg-pink-50",
       benefits: ["Mobilidade", "Flexibilidade", "Recuperação"]
     },
     {
       title: "Quick Massage",
       description: "Massagem na cadeira para relaxamento rápido",
-      icon: "⚡",
+      color: "bg-yellow-50",
       benefits: ["Rápido", "Eficaz", "Sem compromisso"]
     }
   ];
@@ -164,7 +164,7 @@ export default function Home() {
       <section id="servicos" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-slate-900 mb-4">✨ Nossas Terapias</h3>
+            <h3 className="text-4xl font-bold text-slate-900 mb-4">Nossas Terapias</h3>
             <p className="text-xl text-slate-600">Escolha o serviço perfeito para suas necessidades</p>
           </div>
 
@@ -178,7 +178,9 @@ export default function Home() {
                 onClick={() => setActiveService(idx)}
               >
                 <CardHeader>
-                  <div className="text-6xl mb-3 transition-transform duration-300 hover:scale-110">{service.icon}</div>
+                  <div className={`w-12 h-12 ${service.color} rounded-lg mb-3 flex items-center justify-center font-bold text-slate-700`}>
+                    {String.fromCharCode(65 + idx)}
+                  </div>
                   <CardTitle className="text-lg md:text-xl">{service.title}</CardTitle>
                   <CardDescription className="text-sm">{service.description}</CardDescription>
                 </CardHeader>
@@ -202,7 +204,7 @@ export default function Home() {
       <section id="precos" className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-slate-900 mb-4">💰 Investimento em Seu Bem-Estar</h3>
+            <h3 className="text-4xl font-bold text-slate-900 mb-4">Investimento em Seu Bem-Estar</h3>
             <p className="text-xl text-slate-600">Preços acessíveis para qualidade premium</p>
           </div>
 
@@ -234,7 +236,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-4xl font-bold text-slate-900 mb-6">💙 Sobre a Estação QMassage</h3>
+              <h3 className="text-4xl font-bold text-slate-900 mb-6">Sobre a Estação QMassage</h3>
               <p className="text-lg text-slate-700 mb-4">
                 <strong>Desde 2018</strong>, a Estação QMassage é referência em qualidade e profissionalismo no segmento de terapias corporais em São Paulo. Com <strong>5.0 estrelas e 77 avaliações reais</strong> no Google, somos a escolha de clientes que entendem de qualidade.
               </p>
@@ -286,11 +288,11 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
               <div className="flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold">
-                <span className="text-2xl">⭐</span>
+                <span className="text-lg font-bold">★★★★★</span>
                 <span>5.0 - 77 Avaliações Reais no Google</span>
               </div>
             </div>
-            <h3 className="text-4xl font-bold text-slate-900 mb-4">🌟 O que Dizem Nossos Clientes</h3>
+            <h3 className="text-4xl font-bold text-slate-900 mb-4">O que Dizem Nossos Clientes</h3>
             <p className="text-xl text-slate-600">Comentários verificados de clientes reais</p>
           </div>
 
@@ -322,7 +324,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h4 className="text-2xl font-bold text-slate-900 mb-8">📍 Fale Conosco</h4>
+              <h4 className="text-2xl font-bold text-slate-900 mb-8">Fale Conosco</h4>
               
               <div className="space-y-6">
                 <div className="flex gap-4">
