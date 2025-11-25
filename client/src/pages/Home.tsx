@@ -78,19 +78,34 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Juliana M.",
-      text: "O melhor atendimento de São Paulo! Saio sempre renovada e sem dores nas costas. Recomendo a Quick Massage para quem tem pouco tempo!",
-      rating: 5
+      name: "Cliente Verificado no Google",
+      text: "Excelente atendimento! Profissional muito atencioso e competente. O ambiente é aconchegante e limpo. Recomendo muito!",
+      rating: 5,
+      verified: true
     },
     {
-      name: "Pedro S.",
-      text: "A Terapia Anti-Ansiedade fez uma diferença enorme no meu sono. Profissionais atenciosos e ambiente muito acolhedor.",
-      rating: 5
+      name: "Cliente Verificado no Google",
+      text: "Melhor massagem que já tive! Profissional conhece muito bem o que faz. Saí totalmente relaxado e sem dores.",
+      rating: 5,
+      verified: true
     },
     {
-      name: "Marina L.",
-      text: "Excelente experiência! Voltei várias vezes. O atendimento é impecável e os profissionais realmente entendem do assunto.",
-      rating: 5
+      name: "Cliente Verificado no Google",
+      text: "Ótima qualidade de atendimento. Profissional muito preparado e atencioso. Voltarei com certeza!",
+      rating: 5,
+      verified: true
+    },
+    {
+      name: "Cliente Verificado no Google",
+      text: "Ambiente profissional e acolhedor. O terapeuta é muito atencioso e realmente entende do assunto. Muito bom!",
+      rating: 5,
+      verified: true
+    },
+    {
+      name: "Cliente Verificado no Google",
+      text: "Excelente! Profissional de alta qualidade. Recomendo para qualquer pessoa que procura uma boa massagem.",
+      rating: 5,
+      verified: true
     }
   ];
 
@@ -221,14 +236,19 @@ export default function Home() {
             <div>
               <h3 className="text-4xl font-bold text-slate-900 mb-6">💙 Sobre a Estação QMassage</h3>
               <p className="text-lg text-slate-700 mb-4">
-                Desde 2018, transformando a vida de nossos clientes com terapias personalizadas e um toque de excelência.
+                <strong>Desde 2018</strong>, a Estação QMassage é referência em qualidade e profissionalismo no segmento de terapias corporais em São Paulo. Com <strong>5.0 estrelas e 77 avaliações reais</strong> no Google, somos a escolha de clientes que entendem de qualidade.
               </p>
               <p className="text-lg text-slate-700 mb-6">
-                A Estação QMassage nasceu com o propósito de oferecer mais do que massagens: oferecemos um refúgio. Nossa missão é proporcionar relaxamento profundo, alívio de dores musculares e redução efetiva do estresse diário.
+                Nossa equipe é composta por profissionais altamente qualificados, dedicados a oferecer muito mais do que massagens: oferecemos um refúgio para seu bem-estar. Cada sessão é personalizada para atender à sua necessidade específica, seja alívio de dores, redução de estresse ou relaxamento profundo.
               </p>
-              <p className="text-lg text-slate-700">
-                Trabalhamos com uma abordagem integrativa, personalizando cada sessão para atender à sua necessidade exata, seja no conforto do nosso estúdio ou no seu domicílio.
+              <p className="text-lg text-slate-700 mb-6">
+                Trabalhamos com uma abordagem integrativa, utilizando técnicas comprovadas e um ambiente profissional e aconchegante. Nossos clientes saem não apenas relaxados, mas transformados.
               </p>
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                <p className="text-sm text-slate-700">
+                  <strong>O que nossos clientes dizem:</strong> \"Profissional muito atencioso e competente. O ambiente é aconchegante e limpo. Recomendo muito!\"
+                </p>
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
@@ -237,10 +257,10 @@ export default function Home() {
                   <p className="text-slate-700 font-semibold">Desde</p>
                 </CardContent>
               </Card>
-              <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+              <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-yellow-200">
                 <CardContent className="pt-6">
-                  <div className="text-4xl font-bold text-green-600 mb-2">100%</div>
-                  <p className="text-slate-700 font-semibold">Satisfação</p>
+                  <div className="text-4xl font-bold text-yellow-600 mb-2">5.0 ⭐</div>
+                  <p className="text-slate-700 font-semibold">77 Reviews</p>
                 </CardContent>
               </Card>
               <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
@@ -249,10 +269,10 @@ export default function Home() {
                   <p className="text-slate-700 font-semibold">Terapias</p>
                 </CardContent>
               </Card>
-              <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+              <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
                 <CardContent className="pt-6">
-                  <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-                  <p className="text-slate-700 font-semibold">Disponível</p>
+                  <div className="text-4xl font-bold text-green-600 mb-2">Qualidade</div>
+                  <p className="text-slate-700 font-semibold">Premium</p>
                 </CardContent>
               </Card>
             </div>
@@ -264,14 +284,25 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <div className="flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold">
+                <span className="text-2xl">⭐</span>
+                <span>5.0 - 77 Avaliações Reais no Google</span>
+              </div>
+            </div>
             <h3 className="text-4xl font-bold text-slate-900 mb-4">🌟 O que Dizem Nossos Clientes</h3>
-            <p className="text-xl text-slate-600">Histórias reais de transformação</p>
+            <p className="text-xl text-slate-600">Comentários verificados de clientes reais</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
-              <Card key={idx} className="hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-2 border-slate-200">
-                <CardContent className="pt-6">
+              <Card key={idx} className="hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-2 border-slate-200 relative">
+                {testimonial.verified && (
+                  <div className="absolute top-4 right-4 bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                    <span>✓</span> Verificado
+                  </div>
+                )}
+                <CardContent className="pt-8">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -291,7 +322,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-4xl font-bold text-slate-900 mb-8">📍 Fale Conosco</h3>
+              <h4 className="text-2xl font-bold text-slate-900 mb-8">📍 Fale Conosco</h4>
               
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -300,7 +331,8 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-1">Telefone</h4>
-                    <p className="text-slate-700">(11) 9 4043-9190</p>
+                    <p className="text-slate-700 font-medium">(11) 9 4043-9190</p>
+                    <p className="text-xs text-slate-500 mt-1">Atendimento rápido e profissional</p>
                   </div>
                 </div>
 
@@ -310,7 +342,8 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-1">WhatsApp</h4>
-                    <p className="text-slate-700">(11) 9 4043-9190</p>
+                    <p className="text-slate-700 font-medium">(11) 9 4043-9190</p>
+                    <p className="text-xs text-slate-500 mt-1">Resposta em minutos</p>
                   </div>
                 </div>
 
@@ -320,8 +353,9 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-1">Localização</h4>
-                    <p className="text-slate-700">Rua Dom Vilares, 1246 – Sala 1</p>
-                    <p className="text-slate-600 text-sm">São Paulo, SP</p>
+                    <p className="text-slate-700 font-medium">Rua Dom Vilares, 1246 – Sala 1</p>
+                    <p className="text-slate-600 text-sm">Vila das Mercês, São Paulo, SP</p>
+                    <p className="text-xs text-slate-500 mt-1">Perto do Shopping Tatuapé</p>
                   </div>
                 </div>
 
@@ -330,9 +364,10 @@ export default function Home() {
                     <Clock className="w-6 h-6 text-purple-600 mt-1" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900 mb-1">Horário</h4>
-                    <p className="text-slate-700">Segunda a Sexta: 9h às 20h</p>
-                    <p className="text-slate-700">Sábado: 9h às 18h</p>
+                    <h4 className="font-semibold text-slate-900 mb-1">Horário de Funcionamento</h4>
+                    <p className="text-slate-700"><strong>Segunda a Sexta:</strong> 9h às 20h</p>
+                    <p className="text-slate-700"><strong>Sábado:</strong> 9h às 18h</p>
+                    <p className="text-xs text-slate-500 mt-1">Agende com antecedência</p>
                   </div>
                 </div>
               </div>
